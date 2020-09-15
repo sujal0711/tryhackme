@@ -1,0 +1,20 @@
+
+							    John The Ripper
+							======================
+
+1. What flag let's you specify which wordlist to use?
+ans: --wordlist
+
+2. What flag lets you specify which hash format(Ex: MD5,SHA1 etc.) to use?
+ans: --format
+
+3. How do you specify which rule to use?
+ans: --rules
+
+4. Crack this hash : 5d41402abc4b2a76b9719d911017c592 (type : MD5)
+ans: hello
+command: john --format=raw-md5 /md5/md5.txt --wordlist /usr/share/wordlists/rockyou.txt
+
+5. Crack this hash : 5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8 (type : SHA1)
+ans: password
+command: john --format=raw-sha1 /sha1/sha1.txt --wordlist /usr/share/wordlists/rockyou.txt

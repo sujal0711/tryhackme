@@ -1,0 +1,36 @@
+
+							      Nikto
+							     =======
+
+1. How do you specify which host to use?   
+ans: -h
+
+2. What flag disables ssl?
+ans: -nossl
+
+3. How do you force ssl?
+ans: -ssl
+
+4. How do you specify authentication(username + pass)?
+ans: -id
+
+5. How do you select which plugin to use?
+ans: -plugins
+
+6. Which plugin checks if you can enumerate apache users? 
+ans: apacheusers
+
+7. How do you update the plugin list  
+ans: -update
+
+8. How do you list all possible plugins to use
+ans: -list-plugins
+
+
+
+
+
+
+
+
+

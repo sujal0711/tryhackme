@@ -1,0 +1,34 @@
+
+							     Meterpreter
+							    =============
+
+1. What command allows you to download files from the machine?
+ans: download
+
+2. What command allows you to upload files to the machine?
+ans: upload
+
+3. How do you list all running processes?
+ans: ps
+
+4. How do you change processes on the victim host(Ideally it will allow you to change users and gain 
+   the perms associated with that user)
+ans: migrate
+ 
+5. What command lists files in the current directory on the remote machine?
+ans: ls
+
+6. How do you execute a command on the remote host?
+ans: execute
+
+7. What command starts an interactive shell on the remote host?
+ans: shell
+
+8. How do you find files on the target host(Similar function to the linux command "find")
+ans: search
+
+9. How do you get the output of a file on the remote host?
+ans: cat
+
+10. How do you put a meterpreter shell into "background mode
+ans: background

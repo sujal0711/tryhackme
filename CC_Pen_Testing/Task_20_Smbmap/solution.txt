@@ -1,0 +1,32 @@
+
+							     Smbmap
+							    ========
+
+1. How do you set the username to authenticate with?
+ans: -u
+
+2. What about the password?    
+ans: -p
+
+3. How do you set the host?
+ans: -h
+
+4. What flag runs a command on the server(assuming you have permissions that is)?
+ans: -x
+
+5. How do you specify the share to enumerate?
+ans: -s
+
+6. How do you set which domain to enumerate?
+ans: -d
+
+7. What flag downloads a file?
+ans: --download
+
+8. What about uploading one?
+ans: --upload 
+
+9. Given the username "admin", the password "password", and the ip "10.10.10.10", how would you run ipconfig on that machine
+ans: smbmap -u "admin" -p "password" -h 10.10.10.10 -x ipconfig
+
+

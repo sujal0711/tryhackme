@@ -1,0 +1,21 @@
+	
+							    Setting Up
+							  ==============
+
+1. What command allows you to search modules?
+ans: search
+
+2. How do you select a module?   
+ans: use
+
+3. How do you display information about a specific module?
+ans: info
+
+4. How do you list options that you can set?
+ans: options
+
+5. What command lets you view advanced options for a specific module?
+ans: advanced
+
+6. How do you show options in a specific category
+ans: show

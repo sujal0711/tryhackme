@@ -1,0 +1,18 @@
+
+								Netcat
+							      ===========
+
+1. How do you listen for connections? 
+ans: -l
+
+2. How do you enable verbose mode(allows you to see who connected to you)?
+ans: -v
+
+3. How do you specify a port to listen on
+ans: -p
+
+4. How do you specify which program to execute after you connect to a host(One of the most infamous)?
+ans: -e
+
+5. How do you connect to udp ports
+ans: -u

