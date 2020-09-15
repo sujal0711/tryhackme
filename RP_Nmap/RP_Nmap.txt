@@ -1,0 +1,122 @@
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-06-28 01:15 EDT
+NSE: Loaded 149 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 01:15
+Completed NSE at 01:16, 10.01s elapsed
+Initiating NSE at 01:16
+Completed NSE at 01:16, 0.00s elapsed
+Initiating Ping Scan at 01:16
+Scanning 10.10.216.117 [4 ports]
+Completed Ping Scan at 01:16, 0.27s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 01:16
+Completed Parallel DNS resolution of 1 host. at 01:16, 0.04s elapsed
+Initiating SYN Stealth Scan at 01:16
+Scanning 10.10.216.117 [1000 ports]
+Discovered open port 22/tcp on 10.10.216.117
+Discovered open port 80/tcp on 10.10.216.117
+Increasing send delay for 10.10.216.117 from 0 to 5 due to 277 out of 692 dropped probes since last increase.
+Warning: 10.10.216.117 giving up on port because retransmission cap hit (2).
+Completed SYN Stealth Scan at 01:16, 9.19s elapsed (1000 total ports)
+Initiating Service scan at 01:16
+Scanning 2 services on 10.10.216.117
+Completed Service scan at 01:16, 6.72s elapsed (2 services on 1 host)
+Initiating OS detection (try #1) against 10.10.216.117
+Retrying OS detection (try #2) against 10.10.216.117
+Initiating Traceroute at 01:16
+Completed Traceroute at 01:16, 0.65s elapsed
+Initiating Parallel DNS resolution of 2 hosts. at 01:16
+Completed Parallel DNS resolution of 2 hosts. at 01:16, 0.05s elapsed
+NSE: Script scanning 10.10.216.117.
+Initiating NSE at 01:16
+Completed NSE at 01:21, 313.71s elapsed
+Initiating NSE at 01:21
+Completed NSE at 01:21, 2.60s elapsed
+Nmap scan report for 10.10.216.117
+Host is up (0.25s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.10 (Ubuntu Linux; protocol 2.0)
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+80/tcp open  http    Apache httpd 2.4.7 ((Ubuntu))
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|       httponly flag not set
+|   /login.php: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-enum: 
+|   /login.php: Possible admin folder
+|   /robots.txt: Robots file
+|   /config/: Potentially interesting directory w/ listing on 'apache/2.4.7 (ubuntu)'
+|   /docs/: Potentially interesting directory w/ listing on 'apache/2.4.7 (ubuntu)'
+|_  /external/: Potentially interesting directory w/ listing on 'apache/2.4.7 (ubuntu)'
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+| http-slowloris-check: 
+|   VULNERABLE:
+|   Slowloris DOS attack
+|     State: LIKELY VULNERABLE
+|     IDs:  CVE:CVE-2007-6750
+|       Slowloris tries to keep many connections to the target web server open and hold
+|       them open as long as possible.  It accomplishes this by opening connections to
+|       the target web server and sending a partial request. By doing so, it starves
+|       the http server's resources causing Denial Of Service.
+|       
+|     Disclosure date: 2009-09-17
+|     References:
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+|_      http://ha.ckers.org/slowloris/
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+| vulners: 
+|   cpe:/a:apache:http_server:2.4.7: 
+|     	CVE-2017-7679	7.5	https://vulners.com/cve/CVE-2017-7679
+|     	CVE-2018-1312	6.8	https://vulners.com/cve/CVE-2018-1312
+|     	CVE-2017-15715	6.8	https://vulners.com/cve/CVE-2017-15715
+|     	CVE-2014-0226	6.8	https://vulners.com/cve/CVE-2014-0226
+|     	CVE-2017-9788	6.4	https://vulners.com/cve/CVE-2017-9788
+|     	CVE-2019-0217	6.0	https://vulners.com/cve/CVE-2019-0217
+|     	CVE-2020-1927	5.8	https://vulners.com/cve/CVE-2020-1927
+|     	CVE-2019-10098	5.8	https://vulners.com/cve/CVE-2019-10098
+|     	CVE-2020-1934	5.0	https://vulners.com/cve/CVE-2020-1934
+|     	CVE-2019-0220	5.0	https://vulners.com/cve/CVE-2019-0220
+|     	CVE-2018-17199	5.0	https://vulners.com/cve/CVE-2018-17199
+|     	CVE-2017-9798	5.0	https://vulners.com/cve/CVE-2017-9798
+|     	CVE-2017-15710	5.0	https://vulners.com/cve/CVE-2017-15710
+|     	CVE-2016-8743	5.0	https://vulners.com/cve/CVE-2016-8743
+|     	CVE-2016-2161	5.0	https://vulners.com/cve/CVE-2016-2161
+|     	CVE-2016-0736	5.0	https://vulners.com/cve/CVE-2016-0736
+|     	CVE-2014-3523	5.0	https://vulners.com/cve/CVE-2014-3523
+|     	CVE-2014-0231	5.0	https://vulners.com/cve/CVE-2014-0231
+|     	CVE-2019-10092	4.3	https://vulners.com/cve/CVE-2019-10092
+|     	CVE-2016-4975	4.3	https://vulners.com/cve/CVE-2016-4975
+|     	CVE-2015-3185	4.3	https://vulners.com/cve/CVE-2015-3185
+|     	CVE-2014-8109	4.3	https://vulners.com/cve/CVE-2014-8109
+|     	CVE-2014-0118	4.3	https://vulners.com/cve/CVE-2014-0118
+|     	CVE-2014-0117	4.3	https://vulners.com/cve/CVE-2014-0117
+|     	CVE-2018-1283	3.5	https://vulners.com/cve/CVE-2018-1283
+|_    	CVE-2016-8612	3.3	https://vulners.com/cve/CVE-2016-8612
+Aggressive OS guesses: Linux 3.10 - 3.13 (95%), ASUS RT-N56U WAP (Linux 3.4) (95%), Linux 3.16 (95%), Linux 3.1 (93%), Linux 3.2 (93%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (92%), Sony Android TV (Android 5.0) (92%), Android 5.0 - 6.0.1 (Linux 3.4) (92%), Android 5.1 (92%), Android 7.1.1 - 7.1.2 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 0.026 days (since Sun Jun 28 00:44:14 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=263 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 587/tcp)
+HOP RTT       ADDRESS
+1   642.64 ms 10.9.0.1
+2   642.89 ms 10.10.216.117
+
+NSE: Script Post-scanning.
+Initiating NSE at 01:21
+Completed NSE at 01:21, 0.00s elapsed
+Initiating NSE at 01:21
+Completed NSE at 01:21, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 350.53 seconds
+           Raw packets sent: 1734 (77.940KB) | Rcvd: 1130 (46.684KB)
