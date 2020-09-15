@@ -1,0 +1,88 @@
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-08-11 12:41 EDT
+NSE: Loaded 151 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 12:41
+Completed NSE at 12:41, 0.00s elapsed
+Initiating NSE at 12:41
+Completed NSE at 12:41, 0.00s elapsed
+Initiating NSE at 12:41
+Completed NSE at 12:41, 0.00s elapsed
+Initiating Ping Scan at 12:41
+Scanning 10.10.108.18 [4 ports]
+Completed Ping Scan at 12:41, 0.33s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 12:41
+Completed Parallel DNS resolution of 1 host. at 12:41, 0.07s elapsed
+Initiating SYN Stealth Scan at 12:41
+Scanning 10.10.108.18 [1000 ports]
+Discovered open port 2222/tcp on 10.10.108.18
+Increasing send delay for 10.10.108.18 from 0 to 5 due to 280 out of 933 dropped probes since last increase.
+Discovered open port 4444/tcp on 10.10.108.18
+Completed SYN Stealth Scan at 12:41, 35.51s elapsed (1000 total ports)
+Initiating Service scan at 12:41
+Scanning 2 services on 10.10.108.18
+Completed Service scan at 12:41, 1.01s elapsed (2 services on 1 host)
+Initiating OS detection (try #1) against 10.10.108.18
+Retrying OS detection (try #2) against 10.10.108.18
+Retrying OS detection (try #3) against 10.10.108.18
+Retrying OS detection (try #4) against 10.10.108.18
+Retrying OS detection (try #5) against 10.10.108.18
+Initiating Traceroute at 12:42
+Completed Traceroute at 12:42, 0.50s elapsed
+Initiating Parallel DNS resolution of 2 hosts. at 12:42
+Completed Parallel DNS resolution of 2 hosts. at 12:42, 0.04s elapsed
+NSE: Script scanning 10.10.108.18.
+Initiating NSE at 12:42
+Completed NSE at 12:42, 11.18s elapsed
+Initiating NSE at 12:42
+Completed NSE at 12:42, 0.00s elapsed
+Initiating NSE at 12:42
+Completed NSE at 12:42, 0.00s elapsed
+Nmap scan report for 10.10.108.18
+Host is up (0.32s latency).
+Not shown: 998 closed ports
+PORT     STATE SERVICE VERSION
+2222/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 e0:90:ab:18:cf:33:8e:a0:80:56:88:4e:f5:d1:08:e5 (RSA)
+|   256 23:2f:66:45:46:95:64:86:cc:0d:df:de:c5:96:d6:1a (ECDSA)
+|_  256 64:15:bf:d5:7c:80:ed:87:d8:7d:73:d1:75:f1:d1:80 (ED25519)
+4444/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 e8:b0:de:c4:6e:2b:85:6b:84:8f:02:a1:e6:cc:50:ed (RSA)
+|   256 f1:da:c3:75:d4:a4:99:c7:ec:b7:e3:47:bf:42:82:d9 (ECDSA)
+|_  256 79:dc:28:3f:19:9a:2c:34:4b:be:9f:fc:3a:82:79:3b (ED25519)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=8/11%OT=2222%CT=1%CU=39286%PV=Y%DS=2%DC=T%G=Y%TM=5F32C
+OS:A67%P=x86_64-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=108%TI=Z%CI=I%II=I%TS=8)S
+OS:EQ(SP=105%GCD=1%ISR=108%TI=Z%II=I%TS=8)OPS(O1=M508ST11NW6%O2=M508ST11NW6
+OS:%O3=M508NNT11NW6%O4=M508ST11NW6%O5=M508ST11NW6%O6=M508ST11)WIN(W1=7120%W
+OS:2=7120%W3=7120%W4=7120%W5=7120%W6=7120)ECN(R=Y%DF=Y%T=3F%W=7210%O=M508NN
+OS:SNW6%CC=Y%Q=)T1(R=Y%DF=Y%T=3F%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y
+OS:%DF=Y%T=3F%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR
+OS:%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40
+OS:%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G
+OS:%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 209.747 days (since Tue Jan 14 17:46:43 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 21/tcp)
+HOP RTT       ADDRESS
+1   496.82 ms 10.9.0.1
+2   497.15 ms 10.10.108.18
+
+NSE: Script Post-scanning.
+Initiating NSE at 12:42
+Completed NSE at 12:42, 0.00s elapsed
+Initiating NSE at 12:42
+Completed NSE at 12:42, 0.00s elapsed
+Initiating NSE at 12:42
+Completed NSE at 12:42, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 69.30 seconds
+           Raw packets sent: 1664 (77.306KB) | Rcvd: 1269 (54.326KB)

