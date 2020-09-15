@@ -1,0 +1,38 @@
+
+							      OhSINT
+							    ==========
+
+							     Questions
+							    ===========
+
+1. What is this users avatar of?
+ans: cat
+command = exiftool Windowsxp.jpg > exiftool.txt
+command = cat exiftool.txt | grep -a "Copyright"
+(browser name of the copyright holder and go to his twitter handle.)
+
+
+2. What city is this person in?
+ans: london
+(go to his github page and scroll down)
+
+3. Whats the SSID of the WAP he connected to?
+ans: unileverwifi
+(go his twitter handle and read twittes)
+(copy bssid from his twittes)
+(search on https://www.wigle.net/ and enter bssid)
+
+4. What is his personal email address?
+ans: OWoodflint@gmail.com
+(github page)
+
+5. What site did you find his email address on?
+ans: github
+
+6. Where has he gone on holiday?
+ans:new york
+(search his name on google and open his blog)
+
+7. What is this persons password?
+ans: pennYDr0pper.!
+(open website source-code and search)
