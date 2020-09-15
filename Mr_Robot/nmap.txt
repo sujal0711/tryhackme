@@ -1,0 +1,89 @@
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-09-11 11:50 EDT
+NSE: Loaded 151 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 11:50
+Completed NSE at 11:50, 0.00s elapsed
+Initiating NSE at 11:50
+Completed NSE at 11:50, 0.00s elapsed
+Initiating NSE at 11:50
+Completed NSE at 11:50, 0.00s elapsed
+Initiating Ping Scan at 11:50
+Scanning 10.10.90.135 [4 ports]
+Completed Ping Scan at 11:50, 0.55s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 11:50
+Completed Parallel DNS resolution of 1 host. at 11:50, 0.00s elapsed
+Initiating SYN Stealth Scan at 11:50
+Scanning 10.10.90.135 [1000 ports]
+Stats: 0:00:04 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 0.50% done
+Discovered open port 443/tcp on 10.10.90.135
+Discovered open port 80/tcp on 10.10.90.135
+Completed SYN Stealth Scan at 11:50, 28.42s elapsed (1000 total ports)
+Initiating Service scan at 11:50
+Scanning 2 services on 10.10.90.135
+Completed Service scan at 11:51, 15.71s elapsed (2 services on 1 host)
+Initiating OS detection (try #1) against 10.10.90.135
+Retrying OS detection (try #2) against 10.10.90.135
+Initiating Traceroute at 11:51
+Completed Traceroute at 11:51, 0.59s elapsed
+Initiating Parallel DNS resolution of 2 hosts. at 11:51
+Completed Parallel DNS resolution of 2 hosts. at 11:51, 0.01s elapsed
+NSE: Script scanning 10.10.90.135.
+Initiating NSE at 11:51
+Completed NSE at 11:51, 9.98s elapsed
+Initiating NSE at 11:51
+Completed NSE at 11:51, 2.02s elapsed
+Initiating NSE at 11:51
+Completed NSE at 11:51, 0.00s elapsed
+Nmap scan report for 10.10.90.135
+Host is up (0.45s latency).
+Not shown: 997 filtered ports
+PORT    STATE  SERVICE  VERSION
+22/tcp  closed ssh
+80/tcp  open   http     Apache httpd
+|_http-favicon: Unknown favicon MD5: D41D8CD98F00B204E9800998ECF8427E
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache
+|_http-title: Site doesn't have a title (text/html).
+443/tcp open   ssl/http Apache httpd
+|_http-favicon: Unknown favicon MD5: D41D8CD98F00B204E9800998ECF8427E
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache
+|_http-title: Site doesn't have a title (text/html).
+| ssl-cert: Subject: commonName=www.example.com
+| Issuer: commonName=www.example.com
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2015-09-16T10:45:03
+| Not valid after:  2025-09-13T10:45:03
+| MD5:   3c16 3b19 87c3 42ad 6634 c1c9 d0aa fb97
+|_SHA-1: ef0c 5fa5 931a 09a5 687c a2c2 80c4 c792 07ce f71b
+Device type: general purpose|specialized|storage-misc|WAP|broadband router|printer
+Running (JUST GUESSING): Linux 3.X|4.X|2.6.X (90%), Crestron 2-Series (87%), HP embedded (87%), Asus embedded (86%)
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4 cpe:/o:crestron:2_series cpe:/h:hp:p2000_g3 cpe:/o:linux:linux_kernel:2.6.32 cpe:/o:linux:linux_kernel:2.6.22 cpe:/h:asus:rt-n56u cpe:/o:linux:linux_kernel:3.4
+Aggressive OS guesses: Linux 3.10 - 3.13 (90%), Linux 3.10 - 4.11 (89%), Linux 3.11 (89%), Linux 3.12 (89%), Linux 3.13 (89%), Linux 3.13 or 4.2 (89%), Linux 3.2 - 3.5 (89%), Linux 3.2 - 3.8 (89%), Linux 4.2 (89%), Linux 4.4 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 0.016 days (since Fri Sep 11 11:28:53 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=260 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT       ADDRESS
+1   571.20 ms 10.9.0.1
+2   571.49 ms 10.10.90.135
+
+NSE: Script Post-scanning.
+Initiating NSE at 11:51
+Completed NSE at 11:51, 0.00s elapsed
+Initiating NSE at 11:51
+Completed NSE at 11:51, 0.00s elapsed
+Initiating NSE at 11:51
+Completed NSE at 11:51, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 74.40 seconds
+           Raw packets sent: 2116 (97.686KB) | Rcvd: 1876 (2.412MB)
