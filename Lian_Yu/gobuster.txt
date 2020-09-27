@@ -1,0 +1,3 @@
+/.htpasswd (Status: 403)
+/.htaccess (Status: 403)
+/island (Status: 301)
