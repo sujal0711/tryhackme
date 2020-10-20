@@ -1,0 +1,35 @@
+
+
+1. Which layer would choose to send data over TCP or UDP?
+ans: 4 (transport layer)
+
+2. Which layer checks received packets to make sure that they haven't been corrupted?
+ans: 2 (datalink layer)
+
+3. In which layer would data be formatted in preparation for transmission?
+ans: 2 (datalink layer)
+
+4. Which layer transmits and receives data?
+ans: 1 (physical layer)
+
+5. Which layer encrypts, compresses, or otherwise transforms the initial data to give it a standardised format?
+ans: 6 (presentation layer)
+
+6. Which layer tracks communications between the host and receiving computers?
+ans: 5 (session layer)
+
+7. Which layer accepts communication requests from applications?
+ans: 7 (application layer)
+
+8. Which layer handles logical addressing?
+ans: 3 (network layer)
+
+9. When sending data over TCP, what would you call the "bite-sized" pieces of data? 
+ans: segments
+
+10. Which layer would the FTP protocol communicate with?
+ans: 7 (application layer)
+
+11. Which transport layer protocol would be best suited to transmit a live video?
+ans: udp
+

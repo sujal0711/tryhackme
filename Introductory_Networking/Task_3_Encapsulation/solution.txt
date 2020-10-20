@@ -1,0 +1,16 @@
+
+
+1. How would you refer to data at layer 2 of the encapsulation process (with the OSI model)?
+ans: frames
+
+2. How would you refer to data at layer 4 of the encapsulation process (with the OSI model), if the UDP protocol has been selected?
+ans: datagrams
+
+3. What process would a computer perform on a received message?
+ans: de-encapsulation
+
+4. Which is the only layer of the OSI model to add a trailer during encapsulation?
+ans: data link
+
+5. Does encapsulation provide an extra layer of security (Aye/Nay)?
+ans: aye

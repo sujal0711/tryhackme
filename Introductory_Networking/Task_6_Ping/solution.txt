@@ -1,0 +1,16 @@
+
+
+1. What command would you use to ping the bbc.co.uk website?
+ans: ping bbc.co.uk
+
+2. Ping muirlandoracle.co.uk What is the IP address?
+ans: 217.160.0.152
+
+3. What switch lets you change the interval of sent ping requests?
+ans: -i
+
+4. What switch would allow you to restrict requests to IPV4?
+ans: -4
+
+5. What switch would give you a more verbose output?
+ans: -V

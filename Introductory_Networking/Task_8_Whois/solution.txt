@@ -1,0 +1,23 @@
+
+
+1. Perform a whois search on facebook.com
+ans: auto complete 
+
+2. What is the registrant postal code for facebook.com?
+ans: 94025
+command: whois facebook.com
+
+3. When was the facebook.com domain first registered? 
+ans: 29/03/1997
+
+4. Perform a whois search on microsoft.com
+ans: auto-complete
+
+5. Which city is the registrant based in?
+ans: redmond
+ 
+6. [OSINT] What is the name of the golf course that is near the registrant address for microsoft.com?
+ans: bellevue golf club (search in the map)
+
+7. What is the registered Tech Email for microsoft.com? 
+ans: msnhst@microsoft.com

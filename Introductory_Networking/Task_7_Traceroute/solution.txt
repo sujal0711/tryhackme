@@ -1,0 +1,13 @@
+
+
+1. Use traceroute on tryhackme.com Can you see the path your request has taken?
+ans: auto-complete
+
+2. What switch would you use to specify an interface when using Traceroute?
+ans: -i
+
+3. What switch would you use if you wanted to use TCP requests when tracing the route? 
+ans: -t
+
+4. [Lateral Thinking] Which layer of the TCP/IP model will traceroute run on by default?
+ans: internet
