@@ -1,0 +1,39 @@
+
+							A Christmas Crisis 
+						--------------------------------------
+
+1. open firefox and enter your machine ip
+ans: auto-complete
+
+2. Register for an account, and then login. What is the name of the cookie used for authentication?
+ans: auth
+command: press f12 or ctrl+shift+i and then goto storage tab
+
+3. In what format is the value of this cookie encoded?
+ans: hexadecimal
+solution: see the velue of auth cookie. the whole velue is in range of a-z,0-9. this range is in hexadecimal binary
+
+4. Having decoded the cookie, what format is the data stored in?
+ans: json 
+command: hURL -x "7b22636f6d70616e79223a22546865204265737420466573746976616c20436f6d70616e79222c2022757365726e616d652
+         23a2273756a616c227d"> mycookie.txt
+(note: this is my auth cookie your cookie is different so enter your cookies)
+command: cat mycookie.txt
+
+5. Figure out how to bypass the authentication. What is the value of Santa's cookie?
+ans: 7b22636f6d70616e79223a22546865204265737420466573746976616c20436f6d70616e79222c2022757365726e616d65223a2273616e7461227d
+command: cat mycookie.txt
+solution: understand the format of mycookie.txt
+command: nano mycookie.txt
+solution: change only username to santa and then copy whole text
+solution: goto cyberchef.com and then go ToHax tab and paste the the value
+
+6. Now that you are the santa user, you can re-activate the assembly line! What is the flag you're given when 
+   the line is fully active?
+ans: THM{MjY0Yzg5NTJmY2Q1NzM1NjBmZWFhYmQy}
+solution: press ctrl+shift+i goto storage and change the value of auth to the santa's value we already find in que.5
+solution: refresh the page and tick all slidebar all ticks becomes green and you see the flag
+
+
+
+

