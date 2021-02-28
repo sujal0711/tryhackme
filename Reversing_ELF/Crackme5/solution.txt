@@ -1,0 +1,15 @@
+
+				Crackme-5
+			-------------------------
+
+1. what is the input?
+ans: OfdlDSA|3tXb32~X3tX@sX`4tXtz
+command: strings Crackme5
+command: chmod 777 Crackme5
+command: gdb Crackme5
+command: show functions (in strings strncmp@plt is used)
+command: b *0x0000000000400560 (strncmp@plt function is in this value)
+command: run test
+command: info registers (after hitting breakpoints)
+command: x/s 0x7fffffffe320 (its my input value address so try on next value)
+command: x/s 0x7fffffffe340

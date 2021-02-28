@@ -1,0 +1,16 @@
+
+				Crackme-8
+			-------------------------
+
+1. what is the flag?
+ans: flag{at_least_this_cafe_wont_leak_your_credit_card_numbers}
+command: strings Crackme8 (giveFlag function)
+command: chmod 777 Crackme8
+command: r2 -d ./Crackme8
+command: aaa
+command: afl
+	 (read carefully in this atoi function is used)
+	 (atoi function used to convert strings in to integer)
+	 (0xcafef00d into integer)
+	 (convert 0xcafef00d(hexadecimal) to decimal(2'complement) = -889262067)
+command: ./Crackme8 -889262067

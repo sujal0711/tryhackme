@@ -1,0 +1,8 @@
+
+					Crackme-1
+                                   -----------------------
+
+1. What is the flag?
+ans: flag{not_that_kind_of_elf}
+command: chmod 777 crackme1
+command: ./crackme1

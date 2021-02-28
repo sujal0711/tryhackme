@@ -1,0 +1,8 @@
+
+				    Crackme-3
+				-----------------
+
+1. What is the flag?
+ans: f0r_y0ur_5ec0nd_le55on_unbase64_4ll_7h3_7h1ng5 
+command: strings Crackme3
+command: echo "f0r_y0ur_5ec0nd_le55on_unbase64_4ll_7h3_7h1ng5" | base64 -d

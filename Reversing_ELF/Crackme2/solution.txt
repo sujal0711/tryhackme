@@ -1,0 +1,12 @@
+
+					Crackme2
+				------------------------
+
+1. What is the super secret password ?
+ans: super_secret_password
+command: strings Crackme2 | grep "password"
+
+2. What is the flag ?
+ans: flag{if_i_submit_this_flag_then_i_will_get_points}
+command: chmod 777 Crackme2
+command: ./Crackme2 super_secret_password

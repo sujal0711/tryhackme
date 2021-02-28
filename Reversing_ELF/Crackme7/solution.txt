@@ -1,0 +1,14 @@
+
+				Crackme-7
+			--------------------------
+
+1. what is the flag?
+ans: flag{much_reversing_very_ida_wow}
+command: strings Crackme7 (giveflag function)
+command: aaa
+command: afl
+command: pdf @main
+	 (read values i found "Wow such h4x0r!" string on this address eax 0x7a69)
+	 (convert 0x7a69 hexadecimal to decimal)
+	 (0x7a69 = 31337)
+command: ./Crackme7 (enter this value 31337)

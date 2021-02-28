@@ -1,0 +1,15 @@
+
+				     Crackme-4
+				--------------------
+
+1. what is the password?
+ans: my_m0r3_secur3_pwd
+command: strings Crackme4 (read strings for information)
+command: chmod 777 Crackme4
+command: gdb Crackme4 (read strings because in strings use strcmp function)
+command: info functions
+command: b *0x0000000000400520 (because strcmp is in this value)
+command: run test (set breakpoint and run program)
+command: info registers (after hitting break-points)
+command: x/s 0x7fffffffe330 (check values in registers)
+

@@ -1,0 +1,18 @@
+
+				Crackme-6
+			--------------------------
+
+1. what is the password?
+ans: 1337_pwd
+command: strings Crack6 (my_security_test)
+command: chmod 777 Crackme6
+command: r2 -d ./Crackme6
+command: aaa (in radare2)
+command: afl (know functions)
+command: pdf @sym.my_secure_test (interect with this function)
+	 (read all values and functions)
+command: VV @sym.my_secure_test (for graph representation)
+	(notedown all cmp al values)
+	(0x31,0x33,0x33,0x37,0x5f,0x70,0x77,0x64,) 
+	(remove all 0x and "," and combine all values)
+command: hURL -x "313333375f707764" (another terminal)
