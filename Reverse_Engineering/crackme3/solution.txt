@@ -1,0 +1,19 @@
+
+			     crackme-3
+			---------------------
+
+1. What are the first 3 letters of the correct password?
+ans: azt
+full-password = azt123
+command: strings crackme3.bin
+command: r2 -d crackme3.bin
+command: aaa
+command: afl 
+command: pdf @main
+command: db 0x55d5168b175f (mov dword [var_28h], 0)
+command: db 0x55d5168b179b (jle 0x55d5168b1768)
+command: dc (run program to hit break-point)
+command: ds 
+command: pdf @main (0x55d5168b1766 eb2f jmp 0x55d5168b1797)
+	 (var_28h variable is located on this address rbp-0x28)
+command: px @rbp-0x28 (check stored values in this variable)

@@ -1,0 +1,16 @@
+
+				crackme-2
+			   --------------------
+
+1. What is the correct password?
+ans: 4988
+command: strings crackme2.bin
+command: r2 -d ./crackme2.bin
+command: aaa (in radare2)
+command: afl (in radare2)
+command: pdf @main (main function)
+	 (analize registers)
+	 (in registers i got "password is valid")
+	 (here i chacked cmp eax value value is = 0x137c)
+	 (simply copy the value and paste in python and got the password)
+

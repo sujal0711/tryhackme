@@ -1,0 +1,7 @@
+
+				crackme1
+			    -------------------
+
+1. what is the correct password
+ans: hax0r
+command: strings crackme1.bin
