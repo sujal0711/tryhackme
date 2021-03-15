@@ -1,0 +1,25 @@
+
+							Task 3 Planning to escape 
+						------------------------------------------
+
+1. Did you find the note that the others ghouls gave you? where did you find it ? 
+ans: jasonroom.html
+     (open the ip and see the link below the down side)
+
+2. What is the key for Rize executable? 
+ans: kamishiro
+command: ftp 10.10.190.116 (anonymous login allowed see in nmap) (username:anonymous) (no-password)
+command: ls
+command: cd need_Help?
+command: ls
+command: get Aogiri_tree.txt
+command: cd Talk_with_me
+command: mget * (and exit the ftp)
+command: chmod 777 need_to_talk
+command: ./need_to_talk
+command: rabin2 -z need_to_talk (kamishiro)
+
+3. Use a tool to get the other note from Rize?
+ans: auto-complete
+command: steghide extract -sf rize_and_kaneki.jpg (password : You_found_1t)
+command: cat yougotme.txt (its a morse code)

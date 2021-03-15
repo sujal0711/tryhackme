@@ -1,0 +1,15 @@
+
+							   Task-2 Where am i ?
+							--------------------------
+
+1. Use nmap to scan all ports 
+ans: auto-complete
+command: nmap -sC -sV -vv 10.10.190.116 -o nmap.txt
+
+2. How many ports are open ?  
+ans: 3
+command: cat nmap.txt
+
+3. What is the OS used ?
+ans: ubuntu
+command: cat nmap.txt
