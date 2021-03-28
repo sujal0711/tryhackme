@@ -1,0 +1,12 @@
+
+								Pivoting Proxychains & Foxyproxy 
+							-----------------------------------------------
+
+1. What line would you put in your proxychains config file to redirect through a socks4 proxy on 127.0.0.1:4242?
+ans: socks4 127.0.0.1 4242
+
+2. What command would you use to telnet through a proxy to 172.16.0.100:23?
+ans: proxychains telnet 172.16.0.100 23
+
+3. You have discovered a webapp running on a target inside an isolated network. You set up a proxy to gain access to the application. How do you access the proxy: Proxychains (PC) or FoxyProxy (FP)?
+ans: fp (FoxyProxy)

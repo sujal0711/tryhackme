@@ -1,0 +1,37 @@
+
+								Webserver Enumeration
+							--------------------------------------
+
+1. How many of the first 15000 ports are open on the target?
+ans: 4 
+command: nmap -p 1-15000 -vv 10.200.109.200 -T5 -o nmap.txt
+command: cat nmap_15000_ports.txt
+
+2. What OS does Nmap think is running?
+ans: centos
+command: nmap -sC -sV -vv -T5 10.200.109.200 -o nmap.txt
+command: cat nmap.txt
+
+3. Open the IP in your browser -- what site does the server try to redirect you to?
+ans: https://thomaswreath.thm/
+command: curl 10.200.109.200 | grep https
+
+4. add ip in your host file
+ans: auto-complete
+command: nano /etc/hosts (and add 10.200.109.200 thomaswreath.thm )
+
+5. Read through the text on the page. What is Thomas' mobile phone number?
+ans: 447821548812
+command: open in browser and look at the bottom of the page
+
+6. Look back at your service scan results: what server version does Nmap detect as running here?
+ans: MiniServ 1.890 (Webmin httpd)
+command: nmap -sC -sV -vv -T5 10.200.109.200 -o nmap.txt
+command: cat nmap.txt
+
+7. Whare is the CVE number for this exploit?
+ans: CVE-2019-15107
+command: (paste MiniServ 1.890 (Webmin httpd in google))
+
+8. We have everything we need to break into this machine, so let's get going!
+ans: auto-complete
