@@ -1,0 +1,6 @@
+
+									Pivoting plink.exe
+								---------------------------------
+
+1. What tool can be used to convert OpenSSH keys into PuTTY style keys?
+ans: puttygen

