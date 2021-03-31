@@ -1,0 +1,6 @@
+
+									Task 1 How websites work
+								-------------------------------------------
+
+1. What term describes the way your browser renders a website?   
+ans: Front end

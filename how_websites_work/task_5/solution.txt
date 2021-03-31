@@ -1,0 +1,7 @@
+
+									Task 5 HTML Injection
+								-----------------------------------
+
+1. View the website on this task and inject HTML so that a malicious link to http://hacker.com is shown?
+ans: HTML_INJ3CTI0N
+payload: <a href="http://hacker.com">

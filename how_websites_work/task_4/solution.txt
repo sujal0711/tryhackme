@@ -1,0 +1,7 @@
+
+									Task 4 Sensitive Data Exposure 
+								-----------------------------------------------
+
+1. View the website on this task. What is the password hidden in the source code?
+ans: testpasswd
+payload = ctrl+u (and you found creds) ( Username: admin Password: testpasswd)

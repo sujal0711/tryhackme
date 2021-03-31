@@ -1,0 +1,12 @@
+
+									Task 3 JavaScript 
+								---------------------------------
+
+
+1. Click the "View Site" button on this task. On the right-hand side, add JavaScript that changes the demo element's content to "Hack the Planet"?
+ans: JSISFUN
+payload: document.getElementById("demo").innerHTML = "Hack the Planet";
+
+2. Add the button HTML from this task that changes the element's text to "Button Clicked" on the editor on the right, update the code by clicking the "Render HTML+JS    Code" button and then click the button?
+ans: auto-complete
+payload = <button onclick='document.getElementById("demo").innerHTML = "Button Clicked";'>Click Me!</button>

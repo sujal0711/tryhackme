@@ -1,0 +1,16 @@
+
+									Task 2 HTML 
+								---------------------------
+
+1. Let's play with some HTML! On the right-hand side, you should see a box that renders HTML - If you enter some HTML into the box, and click the green 
+   "Render HTML Code" button it will render your HTML on the page; you should see an image of some cats?
+ans: auto-complete
+
+2. One of the images on the cat website is broken - fix it and the image will reveal the hidden text answer!
+ans: HTMLHERO
+payload = <img src='img/cat-2.jpg'>
+
+3. Add a dog image to the page by adding another img tag (<img>) on line 11. The dog image location is img/dog-1.png
+ans: DOGHTML
+payload = <img src='img/dog-1.png'>
+
