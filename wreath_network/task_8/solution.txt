@@ -1,9 +1,0 @@
-
-							  		Pivoting High-level Overview
-								------------------------------------------
-
-1. Which type of pivoting creates a channel through which information can be sent hidden inside another protocol?
-ans: tunnelling
-
-2. Research: Not covered in this Network, but good to know about. Which Metasploit Framework Meterpreter command can be used to create a port forward?
-ans: portfwd
