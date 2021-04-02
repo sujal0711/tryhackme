@@ -1,0 +1,24 @@
+
+									Git Server Code Review 
+								--------------------------------------
+
+1. Look at the information at the top of the script. On what date was this exploit written?
+ans: 18.01.2018
+command: searchsploit gitstack (we found this in task_18) (attack machine)
+command: searchsploit -m php/webapps/43777.py (attack machine)
+command: dos2unix 43777.py (because searchsploit use DOS line endings, which can cause problems in scripts when executed on Linux)
+command: cat 43777.py | grep -Ri date (attack machine)
+
+2. Bearing this in mind, is the script written in Python2 or Python3?
+ans: pyhton2
+command: python2 43777.py (i try with python, python2 and python3 but python2 work with thi script)
+
+3. Add an appropriate shebang to the exploit, at the very top of the file!
+ans: auto complete
+complete: nano 43777.py
+	  (in 43777.py i entered "#!/usr/bin/python2" this in very first line)
+	
+4. Just to confirm that you have been paying attention to the script: What is the name of the cookie set in the POST request 
+   made on line 74 (line 73 if you didn't add the shebang) of the exploit? 
+ans: csrftoken
+command: sed -n '74p' 43777.py | grep -Ri "cookies=" (because i add #!/usr/bin/python2 this line in very first of the file)

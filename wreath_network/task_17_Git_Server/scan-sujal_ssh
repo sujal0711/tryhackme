@@ -1,0 +1,18 @@
+Starting Nmap 6.49BETA1 ( http://nmap.org ) at 2021-04-01 10:27 BST
+Cannot find nmap-payloads. UDP payloads are disabled.
+Nmap scan report for ip-10-200-109-1.eu-west-1.compute.internal (10.200.109.1)
+Cannot find nmap-mac-prefixes: Ethernet vendor correlation will not be performed
+Host is up (-0.18s latency).
+MAC Address: 02:10:71:E5:86:01 (Unknown)
+Nmap scan report for ip-10-200-109-100.eu-west-1.compute.internal (10.200.109.100)
+Host is up (0.00027s latency).
+MAC Address: 02:A3:DE:10:9E:E3 (Unknown)
+Nmap scan report for ip-10-200-109-150.eu-west-1.compute.internal (10.200.109.150)
+Host is up (0.00053s latency).
+MAC Address: 02:FA:11:90:FA:3B (Unknown)
+Nmap scan report for ip-10-200-109-250.eu-west-1.compute.internal (10.200.109.250)
+Host is up (0.00045s latency).
+MAC Address: 02:2F:98:4C:5D:77 (Unknown)
+Nmap scan report for ip-10-200-109-200.eu-west-1.compute.internal (10.200.109.200)
+Host is up.
+Nmap done: 256 IP addresses (5 hosts up) scanned in 4.83 seconds

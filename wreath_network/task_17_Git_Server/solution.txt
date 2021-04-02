@@ -1,0 +1,31 @@
+
+									Git Server Enumeration
+								--------------------------------------
+
+1. Excluding the out of scope hosts, and the current host (.200), how many hosts were discovered active on the network?
+ans: 2
+command: ssh -i id_rsa root@10.200.109.200 (id_rsa is in task_6)
+command: python3 -m http.server 80 (host machine)
+command: curl 10.50.110.11/nmap-sujal -o ./nmap-sujal (ssh)
+command: chmod +x nmap-sujal (ssh)
+command: ip a (10.200.109.200) (ssh)
+command: ./nmap-sujal -sn 10.200.109.0/24 -oN scan-user.txt (ssh)
+	  (10.200.109.150:open, 10.200.109.100:open, 10.200.109.250:openvpn, 10.200.109.200:it-self)
+
+2. In ascending order, what are the last octets of these host IPv4 addresses? (e.g. if the address was 172.16.0.80, submit the 80)
+ans: 100,150
+     (10.200.109.100:open, 10.200.109.150:open)
+
+3. Scan the hosts -- which one does not return a status of "filtered" for every port (submit the last octet only)?
+ans: 150
+command: ./nmap-sujal 10.200.109.100 10.200.109.150 -oN open-ipscan-sujal 
+
+4. Which TCP ports (in ascending order, comma separated) below port 15000, are open on the remaining target?
+ans: 80,3389,5385
+command: ./nmap-sujal 10.200.109.100 10.200.109.150 -oN open-ipscan-sujal
+
+5. Assuming that the service guesses made by Nmap are accurate, which of the found services is more likely to contain an exploitable vulnerability?
+ans: http (port 80 is open)
+
+6. Now that we have an idea about the other hosts on the network, we can start looking at some of the tools and techniques we could use to access them!
+ans: auto-complete

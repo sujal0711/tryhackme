@@ -1,0 +1,24 @@
+Starting Nmap 6.49BETA1 ( http://nmap.org ) at 2021-04-01 10:39 BST
+Unable to find nmap-services!  Resorting to /etc/services
+Cannot find nmap-payloads. UDP payloads are disabled.
+Stats: 0:00:59 elapsed; 0 hosts completed (2 up), 2 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 62.02% done; ETC: 10:40 (0:00:37 remaining)
+Stats: 0:02:12 elapsed; 0 hosts completed (2 up), 2 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 73.40% done; ETC: 10:42 (0:00:48 remaining)
+Nmap scan report for ip-10-200-109-100.eu-west-1.compute.internal (10.200.109.100)
+Cannot find nmap-mac-prefixes: Ethernet vendor correlation will not be performed
+Host is up (-0.20s latency).
+All 6150 scanned ports on ip-10-200-109-100.eu-west-1.compute.internal (10.200.109.100) are filtered
+MAC Address: 02:A3:DE:10:9E:E3 (Unknown)
+
+Nmap scan report for ip-10-200-109-150.eu-west-1.compute.internal (10.200.109.150)
+Host is up (0.00056s latency).
+Not shown: 6146 filtered ports
+PORT     STATE SERVICE
+80/tcp   open  http
+3389/tcp open  ms-wbt-server
+5357/tcp open  wsdapi
+5985/tcp open  wsman
+MAC Address: 02:FA:11:90:FA:3B (Unknown)
+
+Nmap done: 2 IP addresses (2 hosts up) scanned in 305.62 seconds

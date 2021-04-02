@@ -1,0 +1,16 @@
+# Nmap 7.91 scan initiated Fri Mar 26 13:11:57 2021 as: nmap -p 1-15000 -vv -T5 -o nmap.txt 10.200.109.200
+Nmap scan report for 10.200.109.200
+Host is up, received echo-reply ttl 63 (0.19s latency).
+Scanned at 2021-03-26 13:11:57 EDT for 167s
+Not shown: 14994 filtered ports
+Reason: 14822 no-responses and 172 admin-prohibiteds
+PORT      STATE  SERVICE          REASON
+22/tcp    open   ssh              syn-ack ttl 63
+80/tcp    open   http             syn-ack ttl 63
+443/tcp   open   https            syn-ack ttl 63
+4444/tcp  closed krb524           reset ttl 63
+9090/tcp  closed zeus-admin       reset ttl 63
+10000/tcp open   snet-sensor-mgmt syn-ack ttl 63
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Fri Mar 26 13:14:44 2021 -- 1 IP address (1 host up) scanned in 166.98 seconds

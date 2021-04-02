@@ -1,0 +1,26 @@
+
+									Git Server Pivoting
+								-----------------------------------
+
+1. What is the name of the program running the service?
+ans: gitstack
+command: ssh -i id_rsa root@10.200.109.200 (id_rsa is found in task_6)
+command: curl 10.200.109.150 (we found this ip in task_17 with ports)
+
+2. Do these default credentials work (Aye/Nay)?
+ans: nay
+command: sshuttle -r root@10.200.109.200 --ssh-cmd "ssh -i id_rsa" 10.200.109.0/24 -x 10.200.109.200
+	 (open browser and go to 10.200.109.150)
+	 (then you see gitstack directory)
+	 (then go to 10.200.109.150/gitstack and you found default creds)
+	 (default creds are admin:admin)
+	 (but you can't login with this creds so default creds are not working)
+
+3. Use the command: searchsploit SERVICENAME, on Kali to search for exploits related to this service.
+ans: auto-complete
+command: searchsploit gitstack (in attacking machine)
+
+4. There is one Python RCE exploit for version 2.3.10 of the service. What is the EDB ID number of this exploit? 
+ans: 43777
+command: searchsploit gitstack
+	 (and you see php/webapps/43777.py)

