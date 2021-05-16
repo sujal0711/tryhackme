@@ -1,0 +1,9 @@
+
+									Task 1 Get the flag 
+								------------------------------------
+
+1. What is the flag?
+ans: THM{65235128496}
+command: ltrace ./Challenge (enter username)
+	 (check value of strcpy)
+command: ./Challenge
