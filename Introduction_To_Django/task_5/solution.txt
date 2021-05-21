@@ -1,0 +1,28 @@
+
+									Task 5 Unit 5 - CTF 
+								---------------------------------
+									
+									Username: django-admin
+									Password: roottoor1212
+
+1. Admin panel flag?
+ans: THM{DjanGO_Adm1n}
+command: ssh django-admin@10.10.79.27
+command: scp django-admin@10.10.79.27:/home/django-admin/messagebox/db.sqlite3 /home/kali/Desktop/tryhackme/Introduction_To_Django/task_5
+command: sqlitebrowser db.sqlite3
+	 (goto browse-data tab )
+	 (then select table auth_user)
+	 (you see username column in this see entry flag and firstname column you see flag value)
+
+2. User flag? 
+ans: THM{SSH_gUy_101} 
+command: cd /home
+command: ls
+command: cd /StrangeFox
+command: ls
+command: cat user.txt
+
+3. Hidden flag?
+ans: THM{django_w1zzard}
+command: cd/home/django-admin/messagebox/messagebox
+command: cat home.html 

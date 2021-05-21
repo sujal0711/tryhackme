@@ -1,0 +1,7 @@
+
+									  Task 4 Unit 4 - Concluding 
+								----------------------------------------------------
+
+1. Flag from GitHub page
+ans: THM{g1t_djang0_hUb} 
+command: curl https://github.com/Swafox/Django-example | grep -i "thm{*" 

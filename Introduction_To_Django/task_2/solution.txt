@@ -1,0 +1,9 @@
+
+									Task 2 Unit 2 - Getting started 
+								--------------------------------------------------
+
+1. How would we create an app called Forms? 
+ans: python3 manage.py startapp Forms
+
+2. How would we run our project to a local network?
+ans: python3 manage.py runserver 0.0.0.0:8000
