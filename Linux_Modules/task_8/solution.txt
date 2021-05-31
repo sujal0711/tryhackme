@@ -1,0 +1,33 @@
+
+																	Task:8 xargs command
+																----------------------------
+
+1. Read the above.
+ans: auto-complete
+
+2. You're working in a team and your team leader sent you a list of files that needs to be created ASAP within current directory so that he 
+   can fake the synopsis report (that needs to be submitted within a minute or 2) to the invigilator and change the permissions to read-only to only you(Numberic representation). You can find the files list in the "one" folder.
+
+   Use the following flags in ASCII order:
+     Verbose
+     Take argument as "files"
+ans: cat file | xargs -I files -t sh -c "touch files; chmod 400 files"
+
+3. Your friend trying to run multiple commands in one line, and wanting to create a short version of rockyou.txt, messed up by creating files 
+   instead of redirecting the output into "shortrockyou". Now he messed up his home directory by creating a ton of files. He deleted rockyou wordlist in that one liner and can't seem to download it and do all that long process again.
+
+   He now seeks help from you, to create the wordlist and remove those extra files in his directory. You being a pro in linux, show him how it's done in one liner way.
+
+   Use the following flags in ASCII order:
+    Take argument as "word"
+    Verbose
+    Max number of arguments should be 1 in for each file
+
+  You can find the files for this task in two folder.
+ans: ls | xargs -I word -n 1 -t sh -c 'echo word >> shortrockyou; rm word'
+
+4. Which flag to use to specify max number of arguments in one line.
+ans: -n
+
+5. How will you escape command line flags to positional arguments?
+ans: --

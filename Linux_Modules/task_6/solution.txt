@@ -1,0 +1,21 @@
+
+																	Task:6 awk command
+																---------------------------
+
+1. Read the above.
+ans: auto-complete
+
+2. Download the above given file, and use awk command  to print the following output:
+	ippsec:34024
+	john:50024
+	thecybermentor:25923
+	liveoverflow:45345
+	nahamsec:12365
+	stok:1234
+ans: awk 'BEGIN{FS=" "; OFS=":"} {print $1,$4}' awk.txt
+command: awk 'BEGIN{FS=" "; OFS=":"} {print $1,$4}' awk.txt
+
+3. How will you make the output as following (there can be multiple; answer it using the above specified variables in BEGIN pattern):
+   ippsec, john, thecybermentor, liveoverflow, nahamsec, stok, 
+ans: awk 'BEGIN{ORS=", "} {print $1}' awk.txt
+command: awk 'BEGIN{ORS=", "} {print $1}' awk.txt

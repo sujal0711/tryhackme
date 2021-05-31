@@ -1,0 +1,15 @@
+
+																	Task:11 wget command
+																----------------------------
+
+1. Read the above
+ans: auto-complete
+
+2. How will you enable time logging at every new activity that this tool initiates?
+ans: -N
+
+3. What command will you use to download https://xyz.com/mypackage.zip using wget, appending logs to an existing file named "package-logs.txt"
+ans: wget -a package-logs.txt https://xyz.com/mypackage.zip
+
+4. Write the command to read URLs from "file.txt" and limit the download speed to 1mbps.
+ans: wget -i file.txt --limit-rate=1m

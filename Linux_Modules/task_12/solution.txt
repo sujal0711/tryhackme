@@ -1,0 +1,19 @@
+
+																	Task:12 xxd command
+																----------------------------
+
+1. Read the above. 
+ans: auto-complete
+
+2. How will you seek at 10th byte(in hex) in file.txt and display only 50 bytes?
+ans: xxd -s 10xa -l 50 -b file.txt
+
+3. How to display a n bytes of hexdump in 3 columns with a group of 3 octets per row from file.txt? (Use flags alphabetically)
+ans: xxd -c 9 -g 3 file.txt
+
+4. Which has more precedence over the other -c flag or -g flag?
+ans: -c
+
+5. Download the file and find the value of flag.
+ans: flag{wh3sdw0lw1gl9oqasad2fs48as}
+command: xxd -r -p flag.txt 

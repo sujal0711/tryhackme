@@ -1,0 +1,15 @@
+
+																Task:9 sort and uniq 
+															------------------------------
+
+1. Read the above.
+ans: auto-complete
+command:
+
+2. Download the file given for this task, find the uniq items after sorting the file. What is the 2271st word in the output.
+ans: lollol 
+command: sort test.test | uniq | sed -n '2271p'
+
+3. What was the index of term 'michele'
+ans: 2550
+command: sort test.test | uniq | grep -n "michele"

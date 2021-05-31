@@ -1,0 +1,33 @@
+
+																		Task:3 Grep, Egrep, Fgrep comamnd
+																	------------------------------------------
+
+1. Read the above 
+ans: auto-complete
+command: 
+
+2. Is there a difference between egrep and fgrep? (Yea/Nay)
+ans: Yea
+command:
+
+3. Which flag do you use to list out all the lines NOT containing the 'PATTERN'?
+ans: -v
+command:
+
+4. Download the above given file and answer the following questions.
+ans: auto-complete
+command:
+
+5. What user did you find in that file?
+ans: bobthebuilder 
+command: cat grep.txt | grep -i "User"
+
+6. What is the password of that user?
+ans: LinuxIsGawd
+command: cat grep.txt | grep -i "password"
+
+7. Can you find the comment that user just left?
+ans: fs0ciety
+command: cat grep.txt | grep -i "comment"
+
+

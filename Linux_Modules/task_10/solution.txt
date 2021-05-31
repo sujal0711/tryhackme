@@ -1,0 +1,16 @@
+
+																		Task:10 cURL command
+																	----------------------------
+
+1. Read the above
+ans: auto-complete
+
+2. Which flag allows you to limit the download/upload rate of a file?
+ans: --limit-rate
+
+3. How will you curl the webpage of https://tryhackme.com/ specifying user-agent as 'juzztesting'
+ans: curl -A "juzztesting" https://tryhackme.com/ 
+command: curl -A "juzztesting" https://tryhackme.com/ 
+
+4. Can curl perform upload operations?(Yea/Nah)
+ans: yea

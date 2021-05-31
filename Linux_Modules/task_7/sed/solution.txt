@@ -1,0 +1,34 @@
+
+																	Task:7 sed command
+																--------------------------
+
+1. How would you substitute every 3rd occurrence of the word 'hack' to 'back' on every line inside the file file.txt?
+ans:
+command: 
+
+2. How will you do the same operation only on 3rd and 4th line in file.txt?
+ans:
+command:
+
+3. Download the given file, and try formatting the trailing spaces in sed1.txt with a colon(:).
+ans:
+command:
+
+4. View the  sed2 file in the directory. Try putting all alphabetical values together, to get the answer for this question.
+ans:
+command:
+
+5. What pattern did you use to reach that answer string?
+ans:
+command:
+
+6. Alternatively, you can use tr to remove all the digits, and then pipe the output in sed to remove trailing whitespaces.
+   cat sed2.txt | tr '[:digit:]' ' ' | sed 's/  *//g'
+   [Update] Another good way suggested by a room do-er. You can simply use tr -d command to delete all the digits from the file.
+   cat sed2.txt | tr -d '[:digit:]'
+ans:
+command:
+
+7. What did she sed?(In double quotes)
+ans:
+command:

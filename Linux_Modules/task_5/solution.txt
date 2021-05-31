@@ -1,0 +1,15 @@
+
+																	Task:5 tr command
+																-----------------------------
+
+1. Read the Above.
+ans: auto-complete
+
+2. Run tr --help command and tell how will you select any digit character in the string? 
+ans: :digit:
+
+3. What sequence is equivalent to [a-zA-Z] set?
+ans: :alpha:
+
+4. What sequence is equivalent to selecting hexadecimal characters?
+ans: :xdigit:

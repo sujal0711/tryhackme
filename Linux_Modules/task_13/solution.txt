@@ -1,0 +1,19 @@
+
+																Task:13 Other modules
+															------------------------------
+
+1. Read the last learning task.
+ans: auto-complete
+
+2. It's safe to run systemctl command and experiment on your main linux system neither following a proper guide or having any prior 
+   knowledge? (Right/Wrong)
+ans: wrong
+
+3. How will you import a given PGP private key. (Suppose the name of the file is key.gpg)
+ans: gpg --import key.gpg
+
+4. How will you list all port activity if netstat is not available on a machine? (Full Name)
+ans: Socket Statistics
+
+5. What command can be used to fix a broken/irregular/weird acting terminal shell?
+ans: reset
