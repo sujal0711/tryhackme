@@ -1,0 +1,6 @@
+
+																Task 2 Installation and Deployment basics 
+															---------------------------------------------------
+
+1. Which environment variable do you need to change in order to run Flask?
+ans: FLASK_APP

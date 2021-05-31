@@ -1,0 +1,9 @@
+
+																Task 3 Basic syntax and routing 
+															-------------------------------------------
+
+1. What's the default deployment port used by Flask? 
+ans: 5000
+
+2. Is it possible to change that port? (yay/nay)
+ans: yay

