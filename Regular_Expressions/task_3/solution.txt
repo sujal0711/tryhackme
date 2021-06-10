@@ -1,0 +1,21 @@
+
+														Task:3 Wildcards and optional characters 
+													------------------------------------------------
+
+1. Match all of the following words: Cat, fat, hat, rat
+ans: .at
+
+2. Match all of the following words: Cat, cats
+ans: [cC]ats?
+
+3. Match the following domain name: cat.xyz
+ans: cat\.xyz
+
+4. Match all of the following domain names: cat.xyz, cats.xyz, hats.xyz
+ans: 
+ 
+5. Match every 4-letter string that doesn't end in any letter from n to z
+ans:
+
+6. Match bat, bats, hat, hats, but not rat or rats (use the hat symbol)
+ans: [^r]ats?
