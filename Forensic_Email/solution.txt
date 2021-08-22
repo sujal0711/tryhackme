@@ -1,0 +1,28 @@
+
+																Forensic : Email
+															------------------------
+
+
+1. what is the password of the zip file?
+ans: btlo
+
+2. What is the email service used by the malicious actor?
+ans: emkei.cz
+
+3. What is the Reply-To email address?
+ans: negeja3921@pashter.com
+
+4. What is the filetype of the received attachment which helped to continue the investigation?
+ans: .zip
+
+5. What is the name of the malicious actor?
+ans: Pestero Negeja
+
+6. What is the location of the attacker in this Universe?
+ans: The Martian Colony, Beside Interplanetary Spaceport
+
+7. What could be the probable C&C domain to control the attacker’s autonomous bots?
+ans: pashter.com
+
+8. Hope you enjoy this room !!! 
+ans: auto-complete
